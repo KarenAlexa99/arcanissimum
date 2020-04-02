@@ -12,6 +12,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
+        
+        public Joystick joystickDigital;
 
         
         private void Start()
@@ -35,12 +37,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
+           
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
         }
-
+        
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
@@ -49,7 +52,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
             bool crouch = Input.GetKey(KeyCode.C);
-
+            //h+joystickDigital.Horizontal
             // calculate move direction to pass to character
             if (m_Cam != null)
             {
@@ -60,7 +63,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             else
             {
                 // we use world-relative directions in the case of no main camera
-                m_Move = v*Vector3.forward + h*Vector3.right;
+               m_Move = v*Vector3.forward + h*Vector3.right;
             }
 #if !MOBILE_INPUT
 			// walk speed multiplier
