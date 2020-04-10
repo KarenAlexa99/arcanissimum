@@ -53,7 +53,7 @@ public class VIDEDemoPlayer : MonoBehaviour
 
         //Interact with NPCs when pressing E
         //if (Input.GetKeyDown(KeyCode.E))
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             TryInteract();
         }

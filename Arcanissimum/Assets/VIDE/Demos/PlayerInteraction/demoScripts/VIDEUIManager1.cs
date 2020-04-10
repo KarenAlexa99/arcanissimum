@@ -27,7 +27,7 @@ public class VIDEUIManager1 : MonoBehaviour
     public GameObject NPC_Container;
     public GameObject playerContainer;
     public GameObject itemPopUp;
-
+    public Joystick joystickDigital;
     public Text NPC_Text;
     public Text NPC_label;
     public Image NPCSprite;
@@ -131,12 +131,13 @@ public class VIDEUIManager1 : MonoBehaviour
             //For player nodes, NodeData.commentIndex is the index of the picked choice
             if (!data.pausedAction && data.isPlayer)
             {
-                if (Input.GetKeyDown(KeyCode.S))
+                if (joystickDigital.Vertical<-0.99f)
+
                 {
                     if (data.commentIndex < currentChoices.Count - 1)
                         data.commentIndex++;
                 }
-                if (Input.GetKeyDown(KeyCode.W))
+                if (joystickDigital.Vertical > 0.99f)
                 {
                     if (data.commentIndex > 0)
                         data.commentIndex--;

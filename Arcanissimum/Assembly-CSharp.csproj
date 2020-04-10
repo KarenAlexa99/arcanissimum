@@ -63,6 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3rperson\Scripts\AICharacterControl.cs" />
+    <Compile Include="Assets\3rperson\Scripts\ThirdPersonCharacter.cs" />
+    <Compile Include="Assets\3rperson\Scripts\ThirdPersonUserControl.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -110,6 +113,7 @@
     <None Include="Assets\VIDE\Demos\MultiInstances\README.txt" />
     <None Include="Assets\VIDE\Demos\PlayerInteraction\README.txt" />
     <None Include="Assets\VIDE\ReadMe.txt" />
+    <None Include="Assets\3rperson\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/kokar/Documents/GitHub/arcanissimum/Arcanissimum/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
